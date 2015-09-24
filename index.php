@@ -32,7 +32,7 @@
     <!--Form begins-->
     <div="container" align="center">
         <form>
-            <p>What number of words do you want your password to be?</p>
+            <p>How many words do you want your password to b=e?</p>
             <form action="results.php" method="get">
                 Quantity (between 1 and 4):
                 <input type="number" name="quantity" min="1" max="4">
@@ -49,9 +49,9 @@
     </div>
      <br>
     <!--End of form-->
-    <div = container class="password">
+    <div = container class="word">
     <!--Password output-->
-    Your password is: <?php echo $_POST["password"]; ?>
+    Your password is: <?php echo $_POST["word"]; ?>
     <!--End of password output-->
     </div>
 
