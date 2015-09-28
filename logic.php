@@ -1,84 +1,91 @@
 <? php
 
 //link to other files
-require('index.php');
-require('word-list.txt');
-require('special-characters.txt');
-require('numbers.txt')
+include('index.php');
+// require('word-list.txt');
+// require('special-characters.txt');
+// require('numbers.txt')
 
 //Get info from form
-
 echo $_REQUEST['word'];
 
-//Set variables
+// $words = file_get_contents('word-list.txt');
+// echo $wlist;
 
-$words = input from the box for number of words (this will equal 1 - 4)
+//Create array
+$arrayOfWords = array['apple', 'orange', 'pear', 'banana', 'pineapple'];
 
-$words = read('word-list.txt')
+$arrayOfWords[0];
 
-$schar = read('special-charcters.txt')
+//Use explode function
+// $arrayOfWords = explode("",$words);
 
-$numbers = read('numbers.txt')
+//pull number of words requested from form
+$numberOfWordsRequested = $_GET['quantity'];
 
-// Pull word list from text file 
+//Loop -- loop through word list to choose that number of words from list
+for($i=0; $i<$numberOfWordsRequested; $i++);
 
-$wlist = file_get_contents('word-list.txt');
-echo $wlist;
 
-// Create an array of words
+//Random Number Generator -- get a random number between 0 and 4
+$randomNumber = rand(0,6);
+$randomWord = $arrayOfWords[$randomNumber];
 
-$words = Array();
+//Create variable that counts the array of words
+$arrayOfWordsLength=count($arrayOfWords);
 
-// Use a foreach loop to loop through each word
+//Use random number to grab an item from $arrayOfWords
+$randomNumber=rand(0, $arrayOfWordsLength);
 
-foreach($_POST as $key => $value) {
+//Store $randomWord 
 
-if (isset($POST_['numberWords'])){
-$randPhrase = randPassPhraseGen($numberWords);
-}
+//Push elements onto the end of the array
 
-// Use if / else to randomly generate which words/numbers/symbols will be chosen for the password
-	if box is checked for numbers{
-		if $varw=1{
-			output = words[rand(0,count(words))].schar[rand(0,count(schar))].numbers[rand..]
-		}
-		if $varw=2{
-			output = words[rand(0,count(words))].words[rand(0,count(words))].schar[rand(0,count(schar))].numbers[rand..]
-		}
-	}
-	else{
-		if $varw=1{
-			output = words[rand(0,count(words))].schar[rand(0,count(schar))]
-		}
-		if $varw=2{
-			output = words[rand(0,count(words))].words[rand(0,count(words))].schar[rand(0,count(schar))]
-		}
-	}
-}
+int array_push ( $arrayOfWords &$array , mixed $value1 [, mixed $... ] )
 
-else{
-	if box is checked for numbers{
-		if $varw=1{
-			output = words[rand(0,count(words))].numbers{rand..}
-		}
-		if $varw=2{
-			output = words[rand(0,count(words))].words[rand(0,count(words))].numbers[rand..]
-		}
-	else{
-		if $varw=1{
-			output = words[rand(0,count(words))]
-		}
-		if $varw=2{
-			output = words[rand(0,count(words))].words[rand(0,count(words))]
-		}
-	}
-	}
-}
+// $password = array();
 
-// Output results back into the form
-echo $_POST['word'];
+// // Output results back into the form
+// echo $_POST['word'];
 
 ?>
 
 
+<!-- // // Use if / else to randomly generate which words/numbers/symbols will be chosen for the password
+// 	if box is checked for numbers{
+// 		if $varw=1{
+// 			output = words[rand(0,count(words))].schar[rand(0,count(schar))].numbers[rand..]
+// 		}
+// 		if $varw=2{
+// 			output = words[rand(0,count(words))].words[rand(0,count(words))].schar[rand(0,count(schar))].numbers[rand..]
+// 		}
+// 	}
+// 	else{
+// 		if $varw=1{
+// 			output = words[rand(0,count(words))].schar[rand(0,count(schar))]
+// 		}
+// 		if $varw=2{
+// 			output = words[rand(0,count(words))].words[rand(0,count(words))].schar[rand(0,count(schar))]
+// 		}
+// 	}
+// }
 
+// else{
+// 	if box is checked for numbers{
+// 		if $varw=1{
+// 			output = words[rand(0,count(words))].numbers{rand..}
+// 		}
+// 		if $varw=2{
+// 			output = words[rand(0,count(words))].words[rand(0,count(words))].numbers[rand..]
+// 		}
+// 	else{
+// 		if $varw=1{
+// 			output = words[rand(0,count(words))]
+// 		}
+// 		if $varw=2{
+// 			output = words[rand(0,count(words))].words[rand(0,count(words))]
+// 		}
+// 	}
+// 	}
+// }
+ -->

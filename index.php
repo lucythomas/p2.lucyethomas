@@ -32,7 +32,7 @@
     <!--Form begins-->
     <div="container" align="center">
         <form>
-            <p>How many words do you want your password to b=e?</p>
+            <p>How many words do you want your password to be?</p>
             <form action="results.php" method="get">
                 Quantity (between 1 and 4):
                 <input type="number" name="quantity" min="1" max="4">
@@ -51,7 +51,13 @@
     <!--End of form-->
     <div = container class="word">
     <!--Password output-->
-    Your password is: <?php echo $_POST["word"]; ?>
+    Your password is: <pre>
+<?php
+print_r ($arrayOfWords);
+?>
+</pre>
+ 
+
     <!--End of password output-->
     </div>
 
