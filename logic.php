@@ -13,21 +13,18 @@ echo $_REQUEST['word'];
 // echo $wlist;
 
 //Create array
-$arrayOfWords = array['apple', 'orange', 'pear', 'banana', 'pineapple'];
+$arrayOfWords = array['apple', 'orange', 'pear', 'banana', 'pineapple', 'grapefruit', 'cherry', 'grape', 'blueberry', 'raspberry' ];
 
-$arrayOfWords[0];
-
-//Use explode function
+//Use explode function to break up words in word-list.txt
 // $arrayOfWords = explode("",$words);
 
-//pull number of words requested from form
+//Pull number of words requested from form
 $numberOfWordsRequested = $_GET['quantity'];
 
-//Loop -- loop through word list to choose that number of words from list
+//Loop through word list to choose that number of words from list
 for($i=0; $i<$numberOfWordsRequested; $i++);
 
-
-//Random Number Generator -- get a random number between 0 and 4
+//Random Number Generator - get a random number between 0 and 4
 $randomNumber = rand(0,6);
 $randomWord = $arrayOfWords[$randomNumber];
 
@@ -40,16 +37,12 @@ $randomNumber=rand(0, $arrayOfWordsLength);
 //Store $randomWord 
 
 //Push elements onto the end of the array
+int array_push($arrayOfWords("$randomNumber");
 
-int array_push ( $arrayOfWords &$array , mixed $value1 [, mixed $... ] )
-
-// $password = array();
-
-// // Output results back into the form
-// echo $_POST['word'];
+// Output results back into the form
+echo $_POST['word'];
 
 ?>
-
 
 <!-- // // Use if / else to randomly generate which words/numbers/symbols will be chosen for the password
 // 	if box is checked for numbers{
